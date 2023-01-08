@@ -1,7 +1,7 @@
 # Multi-scale Calculation Aided Composition Optimization Design of Low Density and High Strength Nickel-based Superalloy#
 codes and dataset used in the study "Multi-scale Calculation Aided Composition Optimization Design of Low Density and High Strength Nickel-based Superalloy" by Wenyuan Zhao, Qingguo Ren, Zhihao Yao*, Jie Zhao, He Jiang, Jianxin Dong
 
-The following are the python codes that were used to conduct this investigation:
+The following are the python codes that were used to conduct this work:
 
 1.correlation_heatmap.ipynb Calculation of Spearman correlation coefficients and creation of a heatmap table are part of a statistical correlation research.
 
