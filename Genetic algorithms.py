@@ -31,10 +31,10 @@ class MyProblem(ea.Problem):
         x9 = Vars[:, [8]]
         x10 = Vars[:, [9]]
 
-        strength = (7.898 * x1 + 0.332 * x2 + 0.537 * x3 + -1.246 * x4 + 1.511 * x5 + 3.239 * x6 + 7.888 * x7 + 1.355 * x8 + -13.424 * x9 + -8.369 * x10 + 0.119 * (1000 - x1 - x2 - x3 - x4 - x5 - x6 - x7 - x8 - x9 - x10))
-
+        strength = (b1 * x1 + b2 * x2 + b3 * x3 + b4 * x4 + b5 * x5 + b6 * x6 + b7 * x7 + b8 * x8 + b9 * x9 + b10 * x10 + b11 * (1000 - x1 - x2 - x3 - x4 - x5 - x6 - x7 - x8 - x9 - x10))
+        #b1 (2,3..) Represents the strength coefficient of each element, See in the article
         density = -((x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10 + (1000-x1-x2-x3-x4-x5-x6-x7-x8-x9-x10))/(x1/2.7 + x2/8.9 + x3/7.19 + x4/7.874 + x5/10.28 + x6/8.57 + x7/4.506 + x8/19.25 + x9/2.34 + x10/2.281 + (1000-x1-x2-x3-x4-x5-x6-x7-x8-x9-x10)/8.908))
-
+        #ρ1 (2,3..) Represents the density of each element
         pop.CV = np.hstack([x1 - 50,
                             0 - x1,
                             x2 - 150,
