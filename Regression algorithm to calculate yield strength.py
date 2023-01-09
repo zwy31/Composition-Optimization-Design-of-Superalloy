@@ -127,7 +127,7 @@ features = 11 #Number of features#
 path = r'C:\Users\hp\PycharmProjects\pythonProject\data01random.xlsx'
 output = r'C:\Users\hp\PycharmProjects\pythonProject\data01result-1.xlsx'
 
-x_train, y_train, x_test, y_test, x_pred, y_pred = load_data(trains[0], trains[1], tests[0], tests[1], preds[0], preds[1], features, path)   #行数以excel里为准
+x_train, y_train, x_test, y_test, x_pred, y_pred = load_data(trains[0], trains[1], tests[0], tests[1], preds[0], preds[1], features, path)   
 pred = regression_method(method, x_train, y_train, x_test, y_test, x_pred)
 write_predict(x_pred, pred, output)
 file = "data01result-1.xlsx"
