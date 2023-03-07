@@ -109,21 +109,21 @@ def write_predict(x_pred, pred, OutPut):
 
 #Preset regression method#
 from sklearn import ensemble
-model_RandomForestRegressor = ensemble.RandomForestRegressor(n_estimators=83)
+model_RandomForestRegressor = ensemble.RandomForestRegressor(n_estimators=100)
 
 from sklearn import ensemble
-model_AdaBoostRegressor = ensemble.AdaBoostRegressor(n_estimators=71)
+model_AdaBoostRegressor = ensemble.AdaBoostRegressor(n_estimators=100)
 
 from sklearn import ensemble
-model_GradientBoostingRegressor = ensemble.GradientBoostingRegressor(n_estimators=66)
+model_GradientBoostingRegressor = ensemble.GradientBoostingRegressor(n_estimators=100)
 
 #Setting parameters and execution#
 np.random.seed(100)
 method = model_GradientBoostingRegressor #Choose a regression method#
-trains = [1, 477]
-tests = [1, 477]
-preds = [478, 500]
-features = 11 #Number of features#
+trains = [1, 100]
+tests = [1, 100]
+preds = [1, 100]
+features = 2 #Number of features#
 path = r'C:\Users\hp\PycharmProjects\pythonProject\data01random.xlsx'
 output = r'C:\Users\hp\PycharmProjects\pythonProject\data01result-1.xlsx'
 
