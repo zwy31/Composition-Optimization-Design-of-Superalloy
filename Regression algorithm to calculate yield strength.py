@@ -122,7 +122,7 @@ np.random.seed(100)
 method = model_GradientBoostingRegressor #Choose a regression method#
 trains = [1, 100]
 tests = [1, 100]
-preds = [1, 100]
+preds = [1, 477]
 features = 2 #Number of features#
 path = r'C:\Users\hp\PycharmProjects\pythonProject\data01random.xlsx'
 output = r'C:\Users\hp\PycharmProjects\pythonProject\data01result-1.xlsx'
