@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 data = pd.read_excel(r'C:\Users\hp\PycharmProjects\pythonProject\data01.xls')
-a=data.iloc[:, 0:11].corr()
+a=data.iloc[:, 0:3].corr()
 #Drawing Details#
 plt.subplots(figsize=(8, 8))
 plt.xticks(fontsize=13)
