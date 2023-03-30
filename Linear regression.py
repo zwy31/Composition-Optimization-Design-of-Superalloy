@@ -42,13 +42,13 @@ def standRegres(inxMat, inyMat):
 # Use linear regression
 def useStandRegres():
 
-    xArr, yArr = loadDataSet('data01.txt')
+    xArr, yArr = loadDataSet('1.txt')
     ws = standRegres(xArr, yArr)
     xMat = np.mat(xArr)
     yMat = np.mat(yArr)
     yHat = xMat * ws
     print(np.corrcoef(yHat.T, yMat))
-    print(ws[0],ws[1],ws[2],ws[3],ws[4],ws[5],ws[6],ws[7],ws[8],ws[9],ws[10])
+    print(ws[0],ws[1],ws[2],ws[3])
 
 if __name__ == '__main__':
     useStandRegres()
