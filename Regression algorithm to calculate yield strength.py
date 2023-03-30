@@ -13,29 +13,7 @@ from bayes_opt import BayesianOptimization
 
 
 
-#Disrupt data#
-#wb = load_workbook('data01.xlsx')
-def daluan():
-    def random_data(ws):
-        numbers = list(range(1, ws.max_row+1))
-        random.shuffle(numbers)
-        for i in numbers:
-            row = ws[i]
-            r = []
-            for cell in row:
-                r.append(cell.value)
-            ws.append(r)
 
-        ws.delete_rows(1, ws.max_row // 2)
-    for ws in wb:
-
-        random_data(ws)
-
-   # wb.save('data01random.xlsx')
-    # print("\n---save---")
-    # file = "data01random.xlsx"
-    # os.startfile(file)
-# word = input("\n")
 
 
 
@@ -122,13 +100,13 @@ np.random.seed(100)
 method = model_GradientBoostingRegressor #Choose a regression method#
 trains = [1, 100]
 tests = [1, 100]
-preds = [1, 477]
+preds = [1, 100]
 features = 2 #Number of features#
-path = r'C:\Users\hp\PycharmProjects\pythonProject\data01random.xlsx'
-output = r'C:\Users\hp\PycharmProjects\pythonProject\data01result-1.xlsx'
+path = r'C:\Users\hp\PycharmProjects\pythonProject\1.xlsx'
+output = r'C:\Users\hp\PycharmProjects\pythonProject\result.xlsx'
 
 x_train, y_train, x_test, y_test, x_pred, y_pred = load_data(trains[0], trains[1], tests[0], tests[1], preds[0], preds[1], features, path)   
 pred = regression_method(method, x_train, y_train, x_test, y_test, x_pred)
 write_predict(x_pred, pred, output)
-file = "data01result-1.xlsx"
+file = "result.xlsx"
 
